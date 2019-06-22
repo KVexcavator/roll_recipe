@@ -1,6 +1,7 @@
 
 require 'test_helper'
 
+#integration tests
 class RecipeFlowsTest < ActionDispatch::IntegrationTest
   fixtures :recipes
   test "create recipes" do
@@ -20,5 +21,6 @@ class RecipeFlowsTest < ActionDispatch::IntegrationTest
     assert assigns(:recipes)
   end
 end
+
 
 
