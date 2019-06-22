@@ -57,5 +57,13 @@ class RecipesControllerTest<ActionController::TestCase
     }
     assert_redirected_to recipe_path(assigns(:recipe))
   end
+
+  test "should destroy recipe" do
+    assert_difference('Recipe.count', -1) do
+      delete :destroy, id: @recipe
+    end
+    assert_redirected_to recipes_path
+  end
+  
 end
 
