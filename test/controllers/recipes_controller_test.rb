@@ -30,5 +30,12 @@ class RecipesControllerTest<ActionController::TestCase
     end
     assert_redirected_to recipe_path(assigns(:recipe))
   end
+
+  test "should show recipe" do
+    get :show, id: @recipe
+    assert_response :success
+  end
+
+
 end
 
