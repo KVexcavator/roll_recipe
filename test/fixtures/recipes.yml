@@ -8,8 +8,7 @@ curry:
   food_preference_id: 1
   cuisine_id: 1
   ingredients: Onions Tomatoes Salt Oil
-  procedure: Heat Oil Chop Onions, tomatoes and
-Salt to it.
+  procedure: Heat Oil Chop Onions, tomatoes and Salt to it
 
 one:
   title: MyString
