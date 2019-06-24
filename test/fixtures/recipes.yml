@@ -11,21 +11,21 @@ curry:
   procedure: Heat Oil Chop Onions, tomatoes and Salt to it
 
 one:
-  title: MyString
+  title: Shashlik
   cooking_time: MyString
-  difficulty_level: MyString
-  food_type_id: 
-  food_preference_id: 
-  cuisine_id: 1
+  difficulty_level: Easy
+  food_type_id: 3
+  food_preference_id: 2 
+  cuisine_id: 2
   ingredients: MyText
   procedure: MyText
 
 two:
   title: MyString
   cooking_time: MyString
-  difficulty_level: MyString
-  food_type_id: 
-  food_preference_id: 
+  difficulty_level: Easy
+  food_type_id: 1
+  food_preference_id: 2
   cuisine_id: 1
   ingredients: MyText
   procedure: MyText
