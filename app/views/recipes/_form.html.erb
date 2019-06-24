@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :difficulty_level %>
-    <%= form.select :difficulty_level, Recipe::DIFFICULTY,{},:class => "form-control" %>
+    <%= form.select :difficulty_level, Recipe::DIFFICULTY,{:prompt => 'Please Choose'},:class => "form-control" %>
   </div>
 
   <div class="field">
