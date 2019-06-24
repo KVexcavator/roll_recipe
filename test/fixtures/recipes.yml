@@ -1,5 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+curry:
+  title: Curry
+  cooking_time: 1
+  difficulty_level: Easy
+  food_type_id: 1 
+  food_preference_id: 1
+  cuisine_id: 1
+  ingredients: Onions Tomatoes Salt Oil
+  procedure: Heat Oil Chop Onions, tomatoes and
+Salt to it.
+
 one:
   title: MyString
   cooking_time: MyString

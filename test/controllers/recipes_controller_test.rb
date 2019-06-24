@@ -17,7 +17,15 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create recipe" do
     assert_difference('Recipe.count') do
-      post recipes_url, params: { recipe: { cooking_time: @recipe.cooking_time, cuisine_id: @recipe.cuisine_id, difficulty_level: @recipe.difficulty_level, food_preference_id: @recipe.food_preference_id, food_type_id: @recipe.food_type_id, ingredients: @recipe.ingredients, procedure: @recipe.procedure, title: @recipe.title } }
+      post recipes_url, params: { recipe: { 
+      cooking_time: @recipe.cooking_time, 
+      cuisine_id: @recipe.cuisine_id, 
+      difficulty_level: @recipe.difficulty_level, 
+      food_preference_id: @recipe.food_preference_id, 
+      food_type_id: @recipe.food_type_id, 
+      ingredients: @recipe.ingredients, 
+      procedure: @recipe.procedure, title: @recipe.title 
+    } }
     end
 
     assert_redirected_to recipe_url(Recipe.last)
@@ -34,7 +42,16 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update recipe" do
-    patch recipe_url(@recipe), params: { recipe: { cooking_time: @recipe.cooking_time, cuisine_id: @recipe.cuisine_id, difficulty_level: @recipe.difficulty_level, food_preference_id: @recipe.food_preference_id, food_type_id: @recipe.food_type_id, ingredients: @recipe.ingredients, procedure: @recipe.procedure, title: @recipe.title } }
+    patch recipe_url(@recipe), params: { recipe: { 
+      cooking_time: @recipe.cooking_time, 
+      cuisine_id: @recipe.cuisine_id, 
+      difficulty_level: @recipe.difficulty_level, 
+      food_preference_id: @recipe.food_preference_id, 
+      food_type_id: @recipe.food_type_id, 
+      ingredients: @recipe.ingredients, 
+      procedure: @recipe.procedure, 
+      title: @recipe.title 
+    } }
     assert_redirected_to recipe_url(@recipe)
   end
 
