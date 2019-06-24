@@ -8,6 +8,7 @@ class ReciesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get recipes_url
     assert_response :success
+    assert_not_nil assigns(:recipes)
   end
 
   test "should get new" do
@@ -24,7 +25,8 @@ class ReciesControllerTest < ActionDispatch::IntegrationTest
       food_preference_id: @recipe.food_preference_id, 
       food_type_id: @recipe.food_type_id, 
       ingredients: @recipe.ingredients, 
-      procedure: @recipe.procedure, title: @recipe.title 
+      procedure: @recipe.procedure, 
+      title: @recipe.title 
     } }
     end
 
