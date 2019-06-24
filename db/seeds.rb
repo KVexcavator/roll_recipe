@@ -1,7 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+#default data to food_type after db:seeds  the "creae" need revemp by the "first_or_create"
+food_types = ["Curry", "Dessert", "Sides", "Breakfast"]
+food_types.each{|d| FoodType.where(:name => d).create}
+
