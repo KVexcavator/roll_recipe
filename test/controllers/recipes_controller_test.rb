@@ -30,7 +30,7 @@ class ReciesControllerTest < ActionDispatch::IntegrationTest
     } }
     end
 
-    assert_redirected_to recipe_url(Recipe.last)
+    assert_redirected_to recipe_path(Recipe.last)
   end
 
   test "should show recipe" do
@@ -54,7 +54,7 @@ class ReciesControllerTest < ActionDispatch::IntegrationTest
       procedure: @recipe.procedure, 
       title: @recipe.title 
     } }
-    assert_redirected_to recipe_url(@recipe)
+    assert_redirected_to recipe_path(@recipe)
   end
 
   test "should destroy recipe" do
@@ -62,6 +62,6 @@ class ReciesControllerTest < ActionDispatch::IntegrationTest
       delete recipe_url(@recipe)
     end
 
-    assert_redirected_to recipes_url
+    assert_redirected_to recipes_path
   end
 end

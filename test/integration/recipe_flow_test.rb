@@ -8,8 +8,8 @@ class RecipeFlowTest < ActionDispatch::IntegrationTest
     get "/recipes/new"
     assert_response :success
     # post the data to the new method and assert for a success response
-    post "/recipes/new",
-      params: { recipe: {  title: curry.title } }
+    post "/recipes",
+      params: { recipe: {  title: recipes(:curry).title } }
     assert_response :redirect
     follow_redirect!
 
