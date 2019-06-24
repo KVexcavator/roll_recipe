@@ -23,22 +23,22 @@
 
   <div class="field">
     <%= form.label :difficulty_level %>
-    <%= form.text_field :difficulty_level %>
+    <%= form.select :difficulty_level, Recipe::DIFFICULTY,{},:class => "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :food_type_id %>
-    <%= form.text_field :food_type_id %>
+    <%= form.select :food_type_id, options_from_collection_for_select(FoodType.all, :id, :name), { :prompt => 'Please Choose' }, :class => "form-control"  %>
   </div>
 
   <div class="field">
     <%= form.label :food_preference_id %>
-    <%= form.text_field :food_preference_id %>
+    <%= form.select :food_preference_id, options_from_collection_for_select(FoodPreference.all, :id, :name), {:prompt => 'Please Choose'}, :class => "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :cuisine_id %>
-    <%= form.number_field :cuisine_id %>
+    <%= form.select :cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :name), {:prompt => 'Please Choose'}, :class => "form-control" %>
   </div>
 
   <div class="field">
