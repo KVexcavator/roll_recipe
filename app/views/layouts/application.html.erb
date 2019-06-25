@@ -12,6 +12,25 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <ul class="nav justify-content-end">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to "#{current_user.email}", class: "nav-link active"  %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Logout", destroy_user_session_path, class: "nav-link active"%>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link active"  %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "SugnUp", new_user_registration_path, class: "nav-link active"%>
+      </li>
+      <% end %>
+    </ul>
+
     <%= yield %>
   </body>
 </html>
