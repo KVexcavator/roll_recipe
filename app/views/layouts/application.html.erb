@@ -10,8 +10,53 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <!-- notice or alert-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <% if notice %>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <p class="mb-0"><%= notice %></p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> 
+          <% end%>
+          <% if alert %>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p class="mb-0"><%= alert %></p>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <!-- end notice or alert -->
+    
+    <!-- Static navbar-->
+    <!-- Ens static navbar-->
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-9">
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    
+
+    <ul>
+      <li><%= link_to "Recipes", recipes_path %></li>
+    </il>
 
     <ul class="nav justify-content-end">
       <% if user_signed_in? %>
