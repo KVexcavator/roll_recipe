@@ -70,24 +70,43 @@
 
       <!-- Panels-->
       <div class="row">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
           <div class="card">
             <div class="card-body">
               <div class="card-header">
-                Foof preferences 
+                Food preferences 
               </div>
               <% food_preferences.each do |fp| %>
                 <p class="card-text"><%= fp.name %></p>
               <% end %>
             </div>
           </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header">
+                Food Types 
+              </div>
+              <% food_types.each do |ft| %>
+                <p class="card-text"><%= ft.name %></p>
+              <% end %>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header">
+                Cuisines 
+              </div>
+              <% cuisines.each do |c| %>
+                <p class="card-text"><%= c.name %></p>
+              <% end %>
+            </div>
+          </div>
         </div>
         <div class="col-lg-9">
+          <%= yield %>
         </div>
       </div>
-      <!-- end Panels-->
-
-      <%= yield %>
+      <!-- end Panels-->      
     </div>
   </body>
 </html>
