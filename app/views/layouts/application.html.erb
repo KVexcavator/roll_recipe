@@ -65,34 +65,29 @@
             <% end %>
           </ul>
         </div>
-      </nav>
-      
-        
+      </nav>   
       <!-- End static navbar-->
 
-      <%= yield %>
-    </div>
-
-
-
-    <div class="container">
+      <!-- Panels-->
       <div class="row">
         <div class="col-lg-2">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-header">
+                Foof preferences 
+              </div>
+              <% @food_preferences.each do |fp| %>
+                <p class="card-text"><%= fp.name %></p>
+              <% end %>
+            </div>
+          </div>
         </div>
         <div class="col-lg-9">
         </div>
       </div>
+      <!-- end Panels-->
+
+      <%= yield %>
     </div>
-
-
-
-    
-    
-
-    
-
-    
-
-    
   </body>
 </html>
